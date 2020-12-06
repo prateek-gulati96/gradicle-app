@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+* {
+    font-family: "src\assets\fonts\Poppins-Black.ttf";
+  }
+
+  html{
+    background-color: #e9ecf0;
+}
+ 

@@ -1,0 +1,98 @@
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 220px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-image: linear-gradient(#f2b51d,#f2da30);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav span {
+    margin-left: 20px;
+    padding: 10px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #111;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav span:hover {
+    color: #000000;
+    background-color: white;
+    opacity: 0.9;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 222px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    background-color: #e9ecf1
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .card {
+    /* Add shadows to create the "card" effect */
+    border: 1px #ccc thin;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+  .bodyBox{
+    flex: 2;
+    font-size: 15px;
+  }
+
+.listItems{
+  font-size: 20px;
+  width: 80%;
+} 
+
+.image-size{
+  height:  15%; width: 40%; 
+}
+
+.addBlog-button{
+  margin-left: 35px;
+  background-color: white;
+  color: #f2da30;
+  height: 38px;
+  width: 120px;
+  padding: 4px 2px 2px 2px;
+  border: 2px solid #f2da32;
+}
+.btn-edit{
+  margin-right: 10px;
+}
+.btn-delete{
+  margin: 5px 2px 5px 2px;
+}
+.h2{
+  margin-left: 15px;
+}
+.created-date{
+  color: #d3d3d3;font-size: 11px; align-self: flex-end;float: left;
+}
+.modified-date{
+  color: #d3d3d3;font-size: 11px; align-self: flex-end;float: right;
+}

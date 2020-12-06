@@ -1,0 +1,38 @@
+<body style="background-color: white;">
+  
+<div class="sidenav">
+  <img src="../assets/gradicle.png" class="image-size">
+    <span href="#" *ngFor="let list of categorySet" style="font-size: 20px;width: 80%;" (click)="getBlogListBasedCategory(list)">{{list}}</span>
+    <br><br>
+    <button class="btn btn-warning" (click)="createBlog()" class="addBlog-button">Add New +</button>
+  </div>
+  <div class="main">
+    <h2>{{input}}</h2>
+    <div *ngIf="noBlogFound">No Blogs Found!</div>
+    <div>
+      <div *ngFor="let blogs of blogDetails" class="container">   
+        <div class="card">
+          <div>
+            <b>{{blogs.blogTopic}}</b>
+          </div> 
+          <div style="align-self: flex-end;">
+            <button class="btn btn-warning" (click)="viewBlog(blogs.id)" style="margin-right: 10px;">Edit</button>
+            <button class="btn btn-danger" style="margin: 5px 2px 5px 2px;" (click)="deleteBlog(blogs.id)">Delete</button>
+          </div>
+          <div class="bodyBox">
+            {{blogs.body | limitTo : "205" }}
+          </div>
+            <br>
+          
+         <div>
+           <span class="created-date"><strong>Created Date :</strong> {{blogs.createdDate | date}} </span>
+           <span class="modified-date"><strong>Modified Date :</strong> {{blogs.modifiedDate | date}} </span>
+         </div>
+        </div>
+        <br>
+      </div>
+      
+    </div>
+  </div>
+  
+</body>

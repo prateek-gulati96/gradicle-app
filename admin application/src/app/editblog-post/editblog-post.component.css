@@ -1,0 +1,105 @@
+div.preview-images > img {
+    width: 30%;
+  }
+  
+  
+  .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 15%; /* Set the width of the sidebar */
+    flex: 1;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-image: linear-gradient(#f2b51d,#f2da30);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+  .main {
+    margin-left: 7.5%; /* Same as the width of the sidebar */
+    flex: 4;
+    background-color: #e9ecf1;
+  }
+
+  .parent{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .heading{
+    text-align: center;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  input [type=file]{
+    width: 0;
+    height: 0;
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .blog-title{
+    margin: 8px 0;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    width: 88%;
+    color: #83888f;
+    border-radius: 10px; 
+    border-color: rgb(196, 190, 190);
+  }
+  
+  .btn-home{
+    margin-left: 15px; margin-right: 10;background-color: white;
+    color: #f2da30;
+    height: 38px;
+    width: 120px;
+    padding: 4px 2px 2px 2px;
+    border: 2px solid #f2da32;
+    position: absolute;
+    border-radius: 5px;
+  }
+  .btn-save{  
+    margin: 0px 2px 2px 6px;
+     padding: 12px 20px;
+     border-radius: 5px
+  }
+  .richtextbox{
+    width: 78%;
+    float: left;
+  }
+  .richtextbox1{
+    background-color: white; 
+    border-radius: 10px
+  }
+  .select-option{
+    color: #83888f;
+    border-radius: 10px;
+  }
+  .dropdown{
+    width: 20%; 
+    float:right;
+    margin-left: 1px;
+  }
+  .attachment-div{
+    width: 78%;
+    float: left; 
+    margin-top: 20px;
+  }
+  .img-wrapper{
+    float: left; margin-left: 12px;
+  }
+  .btn-verify{
+    color: #83888f;
+  }
+  .img{
+    height:  20%; width: 60%;
+  }
+  .errorText{
+    margin-left: 12px;
+    color: red;
+    font-size: smaller;
+  }

@@ -1,0 +1,25 @@
+
+#login-box{
+    width: 800px;
+    height: 300px;
+    margin: auto;
+    padding-top:none!important ;
+}
+
+#login-title{
+width: 100%;
+margin: auto;
+text-align: center;
+font-size: 12px;
+}
+
+.login-button{
+    background-image: linear-gradient(to right,#f2b51d,#f2da30);
+    margin-top: 10px;
+    margin-left: 230px;
+    width: 300px;
+    border-width: 0;
+    color: white;
+    border-radius: 9px;
+    padding: 9px 9px 9px 9px 
+}

@@ -1,0 +1,63 @@
+<div class="parent">
+    <div class="sidenav">
+      <img src="../assets/gradicle.png"  class="img">
+      <br><br>
+      <button class="btn btn-warning btn-home" (click)="routeHome()">Blog Home</button>
+    </div>
+  
+    <div class="main">
+        <h3 class="heading">Create new Blog Post</h3>
+        <div class="main">
+          <form enctype="multipart/form-data" [formGroup]='blogDetailsForm'>
+            <div class="container">
+              <input style="margin: 8px 0;
+              padding: 12px 15px;width: 88%; color: #83888f;border-radius: 10px; border-color: rgb(196, 190, 190);"  type="text"  placeholder="Enter Title Here" id="blogTopic" formControlName='blogTopic' />
+              <button type="submit" [disabled]="!blogDetailsForm.valid"  (click)='onSubmit(blogDetailsForm.value)' class="btn btn-warning btn-save ">Save</button>
+
+            </div>
+            <div class="container">
+              <div class="richtextbox" >
+                <quill-editor class="form-control-file richtextbox1"  name="body" id="body" formControlName='body' placeholder="Enter Body text here" [styles]="{height: '200px'}" ></quill-editor>
+                
+            </div>
+              <div class="dropdown">
+                <label for="category">Category</label> <br>
+                <select class="select-option" name="category" id="category" formControlName='category'>
+                  <option class="select-option" *ngFor='let cat of categorySet'>{{cat}}</option>
+                </select>
+                <br><br>
+                <label for="subcategory">Sub-category</label> <br>
+                <select class="select-option" name="subcategory" id="subcategory" formControlName='subcategory'>
+                  <option class="select-option" *ngFor='let cat of subCategorySet'>{{cat}}</option>
+                </select>
+              </div>
+            </div>        
+            <br>
+            <div class="container attachment-div">
+              <div class="card img-wrapper">
+                <input accept="image/*"  class="btn" #blogImage type="file" name="blogImage" id="blogImage" formControlName='blogImage' (change)="preview(blogImage.files)" (change)="onFileSelect($event)" />
+                <img [src]="imgURL" *ngIf="imgShow" height="150" width="" alt="File missing" >
+                <span *ngIf="imageError" class="errorText">{{message}}</span>
+              </div>
+              <div class="card" style="float: right;">
+                <div class="card">
+                  <span><button class="btn form-control btn-verify" (click)="set2(uri)">Verify</button></span>
+                  <div *ngIf="verify">
+                    <iframe height="150" width="300" scrolling="no" frameborder="0" float="left"
+                    [src]="videoUrl">
+                    </iframe>
+                  </div>
+                  <div>
+                    <input type="text" class="form-control"  id='videoURL' formControlName='videoURL' placeholder="Enter video URL" #uri>
+                  </div>
+                  
+                </div>
+              </div>
+        
+            </div>
+          
+          </form>
+        </div>
+    </div>
+  
+  </div>
